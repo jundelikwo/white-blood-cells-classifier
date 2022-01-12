@@ -5,6 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense, Dropout
+from tensorflow.keras.callbacks import ModelCheckpoint
 
 CATEGORIES = ['EOSINOPHIL', 'LYMPHOCYTE', 'MONOCYTE', 'NEUTROPHIL']
 DATASET_DIR = 'images'
@@ -115,7 +116,15 @@ classifier.compile(optimizer = 'rmsprop', loss = 'categorical_crossentropy', met
 #                                    epochs = 25,
 #                                    validation_data = test_set,
 #                                    validation_steps = 100)
-history = classifier.fit(x = training_set, validation_data = test_set, epochs = 25)
+
+filepath = "best_weights.hdf5"
+checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
+callbacks_list = [checkpoint]
+
+history = classifier.fit(x = training_set,
+                         validation_data = test_set,
+                         epochs = 32,
+                         callbacks=callbacks_list)
 
 print(history.history.keys())
 classifier.summary()
