@@ -2,3 +2,4 @@
 __pycache__
 images
 *.pkl
+*.hdf5
