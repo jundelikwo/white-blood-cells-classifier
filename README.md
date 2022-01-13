@@ -12,8 +12,8 @@ Get the dataset used in this project from [https://www.kaggle.com/paultimothymoo
 
 ## Create files and folders
 
-Create a folder called  **images** and placed the extracted files downloaded from **Kaggle** there.
+Create a folder called  `images` and placed the extracted files downloaded from **Kaggle** there.
 
 
-### Classifiers
-While there are three classifiers, **resnet.py** has the best performance with an accuracy of about *83%*
+## Classifiers
+While there are three classifiers, `resnet.py` has the best performance with an accuracy of about **83%**
