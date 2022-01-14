@@ -24,9 +24,9 @@ plt.title('Eosinophil'); plt.axis('off'); plotImage('images/TRAIN/EOSINOPHIL/_0_
 plt.subplot(222)
 plt.title('Lymphocyte'); plt.axis('off'); plotImage('images/TRAIN/LYMPHOCYTE/_0_204.jpeg')
 plt.subplot(223)
-plt.title('Monocyte'); plt.axis('off'); plotImage('images/TRAIN/MONOCYTE/_0_180.jpeg')
+plt.title('Monocyte'); plt.axis('off'); plotImage('images/TRAIN/MONOCYTE/_0_185.jpeg')
 plt.subplot(224)
-plt.title('Neutrophil'); plt.axis('off'); plotImage('images/TRAIN/NEUTROPHIL/_0_292.jpeg')
+plt.title('Neutrophil'); plt.axis('off'); plotImage('images/TRAIN/NEUTROPHIL/_0_1986.jpeg')
 
 # Summary of training data
 print('Training data:')
